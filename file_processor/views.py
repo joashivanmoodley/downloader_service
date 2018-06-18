@@ -19,7 +19,7 @@ def process_pdf(request):
             email_address=email_address,
             html_content=html
         )
-        #HTML(html).write_pdf('assets/joash.pdf')
+        HTML(string=html).write_pdf('assets/joash.pdf')
         if queue:
             return HttpResponse(json.dumps({'status': 'success'}))
     return HttpResponse(json.dumps({'status': 'fail'}))    
