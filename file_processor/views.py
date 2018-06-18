@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from weasyprint import HTML
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from file_processor.models import Queue
@@ -19,7 +18,6 @@ def process_pdf(request):
             email_address=email_address,
             html_content=html
         )
-        HTML(string=html).write_pdf('assets/joash.pdf')
         if queue:
             return HttpResponse(json.dumps({'status': 'success'}))
     return HttpResponse(json.dumps({'status': 'fail'}))    
