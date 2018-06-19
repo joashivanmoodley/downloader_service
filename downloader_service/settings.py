@@ -125,7 +125,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = '%s/../assets' % CURRENT_DIRECTORY
 
 EMAIL_HOST = 'smtp.webfaction.com'
-EMAIL_HOST_USER = 'joash_moodtech'
+EMAIL_HOST_USER = 'joash'
 EMAIL_HOST_PASSWORD = 'Tamsin1907!'
 SERVER_EMAIL = 'joash@moodtechsystems.co.za'
-EMAIL_PORT = '587'
+EMAIL_PORT = '25'

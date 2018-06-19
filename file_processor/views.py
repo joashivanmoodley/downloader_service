@@ -6,17 +6,20 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from file_processor.models import Queue
 import json
-# Create your views here.
 
 @csrf_exempt
-def process_pdf(request):
+def process_data(request):
     if request.POST:
         download_type = request.POST.get('download_type', None)
         email_address = request.POST.get('email', None)
-        html = request.POST.get('html', '')
+        data = request.POST.get('html', '')
+        if download_type != 'pdf':
+            data = request.POST.get('data', '')
+        print data
         queue, created = Queue.objects.get_or_create(
             email_address=email_address,
-            html_content=html
+            content=data,
+            download_type=download_type
         )
         if queue:
             return HttpResponse(json.dumps({'status': 'success'}))

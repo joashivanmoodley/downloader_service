@@ -15,14 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from file_processor.views import process_pdf
+from file_processor.views import process_data
 from django.conf import settings
 from django.views.static import serve
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^process-pdf/', process_pdf),
+    url(r'^process-data/', process_data),
     url(r'^assets/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 
 ]
