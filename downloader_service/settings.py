@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'downloader_service',
-        'USER': 'joash',
-        'PASSWORD': '',
+        'USER': 'downloader_service',
+        'PASSWORD': 'ZE6-euu-taQ-Zff',
         'HOST': 'localhost',
     }
 }
