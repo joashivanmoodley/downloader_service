@@ -1,0 +1,7 @@
+django==1.11
+selenium==3.5.0
+requests==2.12.3
+Pillow==4.0.0
+cffi
+WeasyPrint
+xlwt
