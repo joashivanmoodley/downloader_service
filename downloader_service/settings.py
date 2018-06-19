@@ -23,9 +23,11 @@ CURRENT_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 SECRET_KEY = 'u$rs42idyjzv=f#mge$mq0t-jjwm=)5nn^63@%ztha#m10!b3x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
+if not DEBUG:
+    ALLOWED_HOSTS = ['*.moodtechsystems.co.za']
+else:
+    ALLOWED_HOSTS = []
 
 
 # Application definition
