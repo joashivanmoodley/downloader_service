@@ -60,8 +60,7 @@ class Command(BaseCommand):
                 workbook = xlwt.Workbook()
                 sheet = workbook.add_sheet('Tagent Solutions')
                 header_record = data[0].keys()
-                #for d in json.loads(data):
-                #    for index, value in d.items():
+
                 for index, value in enumerate(header_record):
                     sheet.write(0, index, value)
 

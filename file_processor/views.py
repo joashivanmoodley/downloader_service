@@ -10,7 +10,7 @@ import json
 @csrf_exempt
 def process_data(request):
     '''
-    add content to a queue to be processed at a later stage using a cron
+    add content to a queue to be processed at a later stage using a cron.
     '''
     if request.POST:
         download_type = request.POST.get('download_type', None)
